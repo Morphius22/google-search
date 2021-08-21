@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>build this webpage</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <style>
+        main {
+            font-size: 14px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: #4d5156;
+            display: grid;
+            grid-template-columns: auto;
+            grid-template-rows: auto auto auto;
+            grid-template-areas: 
+                "header"
+                "content"
+                "footer"
+            ;
+        }
+
+        header {
+            grid-area: header;
+            width: 100%;
+            box-shadow: 0px 1px 3px #e6e6e6;
+            padding-bottom: 10px;
+        }
+
+        .nav-bar {
+            display: inline-flex;
+            margin: 20px 20px;
+            align-items: center;
+            width: 100%;
+        }
+
+        ul {
+            list-style-type: none;
+            -webkit-appearance: none;
+            margin: 0;
+            padding: 0;
+            display: inline-flex;
+            float: right;
+        }
+
+        li {
+            display: inline;
+            padding: 0px 0px;
+            margin: 0px 20px;
+            float: right;
+        }
+
+        header .nav-bar .right-nav {
+            float: right;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .search {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            justify-self: center;
+            align-self: center;
+        }
+
+        input::-webkit-input-placeholder {
+            font-size: 16px;
+            color: black;
+        }
+
+        header .nav-bar .material-icons-outlined {
+            padding-left: 10px;
+        }
+
+        header .sub-nav-bar .material-icons-outlined {
+            color: #747474;
+            font-size: 15px;
+            align-items: center;
+        }
+
+        results .search-result .url-line .material-icons-outlined {
+            font-size: 18px;
+        }
+
+
+        .text-input {
+            display: inline-flex;
+            background-color: white;
+            border-radius: 50px;
+            padding: 10px 20px;
+            margin-left: 20px;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #ebebeb;
+        }
+
+        #search-bar {
+            width: 500px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+        }
+
+        #logo {
+            height: 30px;
+            width: 80px;
+        }
+
+        .sub-nav-bar {
+            display: flex;
+            margin-left: 10%;
+            align-items: center;
+        }
+
+        header .sub-nav-bar a {
+            padding-left: 3px;
+            text-decoration: none;
+            color: #494949;
+            padding-right: 10px;
+        }
+
+        header .sub-nav-bar #tools {
+            padding-left: 20px;
+        }
+
+        #all, #news, #videos, #maps, #shopping, #more, #tools {
+            padding-right: 20px;
+            align-items: center;
+            align-content: center;
+        }
+
+        .search-result {
+            grid-area: content;
+            margin-left: 10%;
+            margin-right: 50%;
+        }
+
+        p {
+            display: inline;
+        }
+
+        .url-line {
+            padding-top: 1em;
+            padding-bottom: 0.25em;
+        }
+
+        .page-title {
+            font-size: 20px;
+            padding-top: 0.25em;
+            padding-bottom: 0.25em;
+        }
+
+        .page-description {
+            padding-top: 0.25em;
+            padding-bottom: 1em;
+        }
+
+        main .search-result .url-line {
+            display: flex;
+            align-items: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <main>
+        <header>
+            <div class="nav-bar">
+                <img id="logo" src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
+                    alt="Google Logo">
+                <div class="text-input">
+                    <div class = "search">
+                        <input id="search-bar" type="text" placeholder="build this website">
+                    </div>
+
+                    <div>
+                        <span class="material-icons-outlined" id="search-icon">search</span>
+                        <span class="material-icons-outlined">mic</span>
+                    </div>
+                </div>
+
+                <div class = "right-nav">
+                    <ul>
+                        <li><span class="material-icons-outlined">settings</span></li>
+                        <li><span class="material-icons-outlined">apps</span></li>
+                        <li><span class="material-icons-outlined">account_circle</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class = "sub-nav-bar">
+                <span id="all">
+                    <span class="material-icons-outlined">
+                        search
+                    </span>
+                    <a href="#">All</a>
+                </span>
+
+                <span id="news">
+                    <span class="material-icons-outlined">
+                        article
+                    </span>
+                    <a href="#">News</a>
+                </span>
+
+                <span id="videos">
+                    <span class="material-icons-outlined">
+                        smart_display
+                    </span>
+                    <a href="#">Videos</a>
+                </span>
+
+                <span id="maps">
+                    <span class="material-icons-outlined">
+                        place
+                    </span>
+                    <a href="#">Maps</a>
+                </span>
+
+                <span id="shopping">
+                    <span class="material-icons-outlined">
+                        sell
+                    </span>
+                    <a href="#">Shopping</a>
+                </span>
+
+                <span id="more">
+                    <span class="material-icons-outlined">
+                        more_vert
+                    </span>
+                    <a href="#">More</a>
+                </span>
+
+                <span id="tools">
+                    <a href="#">Tools</a>
+                </span>
+
+            </div>
+        </header>
+
+        <results>
+
+            <div class="search-result">
+                <div class="url-line">
+                    <span>
+                        <p>https://musashi.github.io > google search results</p>
+                        <span class="material-icons-outlined">more_vert</span>
+                    </span>
+                </div>
+
+                <div class="page-title">
+                    <span>
+                        <a href="#">The way of the sword - Musashi's Github</a>
+                    </span>
+                </div>
+
+                <div class="page-description">
+                    <span>
+                        <p>
+                            There is no specialties. In order to be successful with the sword, you must succeed wih the mind and spirit.
+
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores suscipit exercitationem atque maxime laboriosam repudiandae facere, natus eaque debitis at consectetur adipisci? Dignissimos temporibus iure impedit ratione aut. Quidem, reprehenderit?
+                        </p>
+                    </span>
+                </div>
+            </div>
+
+            <div class="search-result">
+                <div class="url-line">
+                    <span>
+                        <p>https://morphius-lf.github.io > google search results</p>
+                        <span class="material-icons-outlined">more_vert</span>
+                    </span>
+                </div>
+
+                <div class="page-title">
+                    <span>
+                        <a href="#">Which pill will you choose - Morphius github </a>
+                    </span>
+                </div>
+
+                <div class="page-description">
+                    <span>
+                        <p>
+                            Would you like the red pill or the blue pill? Wake up exactly as you remember or see the truth.
+
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero sunt iste ipsam, sint recusandae praesentium. Sapiente laudantium exercitationem et beatae ad. Reprehenderit, quidem nesciunt. Velit iure dolores quia consectetur blanditiis?
+                        </p>
+                    </span>
+                </div>
+            </div>
+
+            <div class="search-result">
+                <div class="url-line">
+                    <span>
+                        <p>https://bruce-lee.github.io > google search results</p>
+                        <span class="material-icons-outlined">more_vert</span>
+                    </span>
+                </div>
+
+                <div class="page-title">
+                    <span>
+                        <a href="#">Be like water - Bruce Lee github </a>
+                    </span>
+                </div>
+
+                <div class="page-description">
+                    <span>
+                        <p>
+                            Life is a running river. You can never step in the same water twice, my friend.
+
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos assumenda quas harum quam ea a amet exercitationem cupiditate libero temporibus recusandae, corporis atque? Ducimus voluptate consequuntur sequi quasi corrupti reiciendis!
+                        </p>
+                    </span>
+                </div>
+            </div>
+
+            <div class="search-result">
+                <div class="url-line">
+                    <span>
+                        <p>https://Seneca.github.io > google search results</p>
+                        <span class="material-icons-outlined">more_vert</span>
+                    </span>
+                </div>
+
+                <div class="page-title">
+                    <span>
+                        <a href="#">Nature provides - Seneca github </a>
+                    </span>
+                </div>
+
+                <div class="page-description">
+                    <span>
+                        <p>
+                            Nature provides everything that we need. Live in accordance with nature and life will be easy.
+
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quod qui nam, laborum temporibus nemo laboriosam id. Inventore fugiat, ad deleniti distinctio autem atque. Sunt consequatur nostrum mollitia ut impedit!
+                        </p>
+                    </span>
+                </div>
+            </div>
+
+        </results>
+
+    </main>
+</body>
+
+</html>
